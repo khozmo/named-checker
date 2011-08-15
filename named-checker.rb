@@ -2,8 +2,6 @@ require 'rubygems'
 require 'whois'
 require 'pp'
 
-#die("please enter path to named.conf file") if defined?(ARGV[0])
-
 if ARGV[0].nil? then
   puts("please enter path to named.conf") 
   exit
