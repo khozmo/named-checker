@@ -10,7 +10,7 @@ if ARGV[0].nil? then
 end
 
 count = 0
-output_file = File.new("named-output.csv", "w")
+output_file = File.new("#{ARGV[0].gsub('.','-')}.csv", "w")
 
 File.open("#{ARGV[0]}").each {|line|
   if line =~ /zone / && line !~ /arpa/ then
