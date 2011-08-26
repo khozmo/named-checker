@@ -45,10 +45,7 @@ File.open("#{ARGV[0]}").each {|line|
     end
   
     sleep 20 if line.include?(".org") || line.include?(".gov")
-    puts "#{domain_name[1]} unsorted #{servers}"
-    servers.sort!
-    puts "#{domain_name[1]} sorted #{servers}"
-    output_file.puts ("#{domain_name[1]},#{servers.join(",")}")
+    output_file.puts ("#{domain_name[1]},#{servers.sort.join(",")}")
   end
 }
 output_file.close
